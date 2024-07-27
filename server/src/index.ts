@@ -1,6 +1,6 @@
 import express, { Express } from "express";
 import mongoose from "mongoose";
-import financialRecordRouter from "./Routes/financial-records";
+import financialRecordRouter from "./routes/financial-records";
 import cors from "cors";
 
 const app: Express = express();
@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 const mongoURI: string =
-  "mongodb+srv://machadop1407:UvOUTpZW7EH85MZl@personalfinancetracker.qb0edtk.mongodb.net/";
+"mongodb+srv://trevortopolski84:vJXiiY0Lp2QCPNI8@personalfinancetracker.bcmykba.mongodb.net/";
 
 mongoose
   .connect(mongoURI)
@@ -22,3 +22,4 @@ app.use("/financial-records", financialRecordRouter);
 app.listen(port, () => {
   console.log(`Server Running on Port ${port}`);
 });
+
